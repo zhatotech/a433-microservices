@@ -6,9 +6,7 @@ services:
       - item-db   # menjalankan service item-app setelah item-db berjalan
     ports:
       - 80:8080   # port mapping 
-    working_dir: /app
     restart: always     # container selalu restart ketika terhenti
-    command: ["npm", "start"]
   item-db:
     image: mongo:3  # menggunakan image mongo 3 dari docker hub
     volumes:
